@@ -1,0 +1,13 @@
+name: 'build-test'
+on:
+  push:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PUSHPLUS推送通知
+        uses: xhnmt/pushplus-action@v1.0.0
+        with:
+          token: ${{ secrets.token }}
+          title: "我是一个小测试😝"
+          content: "我是一个小测试😝"
